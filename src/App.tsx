@@ -68,7 +68,8 @@ const PEOPLE: Person[] = [
   { id:"berne",      name:"バーン",          en:"Berne",           year:1957, died:1970, school:"ta",              influences:["freud","erikson"],  desc:"交流分析・TA（1957年論文、1961年著書、1964年「Games People Play」）。精神分析から出発しエリクソンに師事。「親・大人・子ども」の自我状態モデル。精神分析×人間性×認知の融合。" },
 
   // ── 人間性心理学系 ──
-  { id:"rogers",     name:"ロジャーズ",      en:"Rogers",          year:1940, died:1987, school:"humanistic",      influences:[],                    desc:"クライアント中心療法（1940年代〜）。共感・無条件の肯定的関心・一致性の3条件。1957年に人格変化の必要十分条件を記述。ゴードンとローゼンバーグの師。人間性心理学の中心。" },
+  { id:"maslow",     name:"マズロー",        en:"Maslow",          year:1954, died:1970, school:"humanistic",      influences:["freud"],             desc:"欲求階層説と自己実現理論（1942年発表、1954年著書『動機と人格』）。フロイト・アドラー・ユング・ホーナイ・ゴールドシュタインの部分的真実を統合。行動主義（第一の力）と精神分析（第二の力）を超える「第三の力」＝人間性心理学をロジャーズと共に確立。ローの職業心理学に直接影響。" },
+  { id:"rogers",     name:"ロジャーズ",      en:"Rogers",          year:1940, died:1987, school:"humanistic",      influences:[],                    desc:"クライアント中心療法（1940年代〜）。共感・無条件の肯定的関心・一致性の3条件。1957年に人格変化の必要十分条件を記述。マズローと並ぶ人間性心理学（第三の力）の双頭。ゴードンとローゼンバーグの師。" },
   { id:"gordon",     name:"ゴードン",        en:"Gordon",          year:1962, died:2002, school:"humanistic",      influences:["rogers"],            desc:"PET親業訓練（1962年コース、著書1970）。ロジャーズの直弟子。I-messageとActive Listeningを体系化。NVCの最も近い先行モデル。" },
 
   // ── NVC系 ──
@@ -82,7 +83,7 @@ const PEOPLE: Person[] = [
 
   // ── 職業指導/特性因子系（NEW） ──
   { id:"parsons",    name:"パーソンズ",      en:"Parsons",         year:1908, died:1908, school:"vocational",      influences:[],                    desc:"職業指導の創始者。1908年ボストンに職業局を設立、翌1909年に死後出版『Choosing a Vocation』。自己分析・職業理解・合理的推論の3ステップ。特性因子論の源流。" },
-  { id:"roe",        name:"ロー",            en:"Roe",             year:1956, died:1991, school:"vocational",      influences:[],                    desc:"職業心理学（1956）。マズローの欲求階層説を取り入れ、幼児期の養育態度が職業選択を方向づけるとした早期決定論。8職業分野×6レベルの二次元分類を提唱。" },
+  { id:"roe",        name:"ロー",            en:"Roe",             year:1956, died:1991, school:"vocational",      influences:["maslow"],            desc:"職業心理学（1956）。マズローの欲求階層説を取り入れ、幼児期の養育態度が職業選択を方向づけるとした早期決定論。8職業分野×6レベルの二次元分類を提唱。" },
   { id:"holland",    name:"ホランド",        en:"Holland",         year:1959, died:2008, school:"vocational",      influences:[],                    desc:"RIASEC類型論（1959年初出論文、1973年著書）。6つのパーソナリティ・タイプと環境の一致度でキャリア選択・満足・安定を予測。六角形モデル。VPI・SDSなど世界的に普及した検査群を開発。" },
 
   // ── キャリア発達系（NEW） ──
