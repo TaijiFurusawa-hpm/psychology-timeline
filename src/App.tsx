@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 
 const SCHOOLS: Record<string, { label: string; color: string; row: number }> = {
   psychoanalysis:  { label: "精神分析系",          color: "#94a3b8", row: 0 },
@@ -112,7 +112,7 @@ const PEOPLE: Person[] = [
 ];
 
 const MIN_Y = 1880, MAX_Y = 2025;
-const W = 1200, ROW_H = 36, TOP = 38, NR = 14;
+const W = 1200, ROW_H = 36, TOP = 54, NR = 14;
 
 function tx(year: number) { return 80 + ((year - MIN_Y) / (MAX_Y - MIN_Y)) * (W - 100); }
 function ty(school: string) { return TOP + SCHOOLS[school].row * ROW_H + ROW_H / 2; }
@@ -122,6 +122,19 @@ const decades = Array.from({length: 14}, (_, i) => 1890 + i * 10);
 export default function App() {
   const [sel, setSel] = useState<string | null>(null);
   const [hov, setHov] = useState<string | null>(null);
+  const topScrollRef = useRef<HTMLDivElement>(null);
+  const mainScrollRef = useRef<HTMLDivElement>(null);
+  const syncing = useRef(false);
+
+  const syncScroll = useCallback((source: "top" | "main") => {
+    if (syncing.current) return;
+    syncing.current = true;
+    const from = source === "top" ? topScrollRef.current : mainScrollRef.current;
+    const to = source === "top" ? mainScrollRef.current : topScrollRef.current;
+    if (from && to) to.scrollLeft = from.scrollLeft;
+    requestAnimationFrame(() => { syncing.current = false; });
+  }, []);
+
   const svgH = Object.keys(SCHOOLS).length * ROW_H + TOP + 16;
   const actId = sel || hov;
   const act = PEOPLE.find(p => p.id === actId);
@@ -155,8 +168,15 @@ export default function App() {
           ))}
         </div>
 
+        {/* Top scrollbar (synced) */}
+        <div ref={topScrollRef} onScroll={() => syncScroll("top")}
+          style={{overflowX:"auto",overflowY:"hidden",height:12,background:"#0a0c18",borderRadius:"8px 8px 0 0",border:"1px solid #181d30",borderBottom:"none"}}>
+          <div style={{width:W,height:1}} />
+        </div>
+
         {/* SVG */}
-        <div style={{overflowX:"auto",background:"#0a0c18",border:"1px solid #181d30",borderRadius:8}}>
+        <div ref={mainScrollRef} onScroll={() => syncScroll("main")}
+          style={{overflowX:"auto",background:"#0a0c18",border:"1px solid #181d30",borderRadius:"0 0 8px 8px"}}>
           <svg width={W} height={svgH} style={{display:"block",fontFamily:"monospace"}}>
             <defs>
               <marker id="a" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
@@ -176,7 +196,7 @@ export default function App() {
               <g key={i}>
                 <rect x={tx(w.x1)} y={TOP-14} width={tx(w.x2)-tx(w.x1)} height={svgH-TOP+6}
                   fill={w.color+"10"} stroke={w.color+"40"} strokeWidth={1} strokeDasharray="3,6"/>
-                <text x={(tx(w.x1)+tx(w.x2))/2} y={TOP-3} textAnchor="middle"
+                <text x={(tx(w.x1)+tx(w.x2))/2} y={14} textAnchor="middle"
                   fill={w.color+"cc"} fontSize={9} fontWeight={700}>{w.label}</text>
               </g>
             ))}
@@ -185,7 +205,7 @@ export default function App() {
             {decades.map(d => (
               <g key={d}>
                 <line x1={tx(d)} y1={TOP-14} x2={tx(d)} y2={svgH-4} stroke="#1a2030" strokeWidth={1} strokeDasharray="2,6"/>
-                <text x={tx(d)} y={TOP-3} textAnchor="middle" fill="#5a6a80" fontSize={9} fontWeight={600}>{d}</text>
+                <text x={tx(d)} y={TOP-4} textAnchor="middle" fill="#5a6a80" fontSize={9} fontWeight={600}>{d}</text>
               </g>
             ))}
 
