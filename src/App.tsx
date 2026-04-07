@@ -36,8 +36,9 @@ interface Person {
 
 const PEOPLE: Person[] = [
   // ── 精神分析系 ──
-  { id:"freud",      name:"フロイト",        en:"Freud",           year:1895, died:1939, school:"psychoanalysis",  influences:[],                    desc:"精神分析の創始者。無意識・自我・イド・超自我。行動療法・人間性心理学・TAはいずれも精神分析への反発から生まれた。エリス・バーンの思想的出発点。" },
-  { id:"erikson",    name:"エリクソン",      en:"Erikson",         year:1950, died:1994, school:"psychoanalysis",  influences:["freud"],             desc:"心理社会的発達理論。フロイトの弟子だが社会・文化的側面を重視。バーンの直接の師。8段階発達モデル。アイデンティティ概念でキャリア理論にも影響。" },
+  { id:"freud",      name:"フロイト",        en:"Freud",           year:1895, died:1939, school:"psychoanalysis",  influences:[],                    desc:"精神分析の創始者。無意識・自我・イド・超自我。行動療法・人間性心理学・TAはいずれも精神分析への反発から生まれた。エリス・バーン・ユングの思想的出発点。" },
+  { id:"jung",       name:"ユング",          en:"Jung",            year:1930, died:1961, school:"psychoanalysis",  influences:["freud"],             desc:"分析心理学の創始者。フロイトの弟子だが1912〜13年に決別しリビドーを普遍的心的エネルギーに拡張。「人生の諸段階」（1930〜31, CW第8巻）で人生を太陽の弧に喩え前半（外的適応）と後半（内面・個性化）に二分。35〜40歳の中年の転換（Lebenswende）を提唱。集合的無意識・元型・個性化。エリクソンのライフサイクル論、スーパーのキャリア発達段階の先駆。" },
+  { id:"erikson",    name:"エリクソン",      en:"Erikson",         year:1950, died:1994, school:"psychoanalysis",  influences:["freud","jung"],      desc:"心理社会的発達理論。フロイト・ユング双方から影響を受け、人生全体にわたる8段階発達モデルを構築。壮年期「生殖性vs停滞性」はユングの後半人生論と並行。バーンの直接の師。アイデンティティ概念でキャリア理論にも影響。" },
 
   // ── 行動療法系 ──
   { id:"pavlov",     name:"パブロフ",        en:"Pavlov",          year:1890, died:1936, school:"behaviorism",     influences:[],                    desc:"古典的条件づけ。サルターが直接援用したパブロフ主義の源泉。「条件反射」が行動療法全体の出発点。" },
@@ -86,7 +87,7 @@ const PEOPLE: Person[] = [
 
   // ── キャリア発達系（NEW） ──
   { id:"ginzberg",   name:"ギンズバーグ",    en:"Ginzberg",        year:1951, died:1988, school:"career_dev",      influences:[],                    desc:"発達的職業選択理論（1951）。職業選択を発達過程として初めて体系化。空想期・試行期・現実期の3段階。1972年に生涯プロセスとして改訂。スーパーの先駆的存在。" },
-  { id:"super",      name:"スーパー",        en:"Super",           year:1957, died:1994, school:"career_dev",      influences:["parsons","ginzberg"],desc:"キャリア発達理論（1957）。Columbia大学。キャリアを自己概念の実現過程として定義。成長・探索・確立・維持・解放の5段階。1984年ライフ・キャリア・レインボー（ライフスパン＋ライフスペース）を提唱。サビカスの直接の先駆者。" },
+  { id:"super",      name:"スーパー",        en:"Super",           year:1957, died:1994, school:"career_dev",      influences:["parsons","ginzberg","jung"],desc:"キャリア発達理論（1957）。Columbia大学。キャリアを自己概念の実現過程として定義。ユングの人生段階論を踏まえ、成長・探索・確立・維持・解放の5段階を提唱。1984年ライフ・キャリア・レインボー（ライフスパン＋ライフスペース）。サビカスの直接の先駆者。" },
 
   // ── 社会的学習理論系（NEW） ──
   { id:"bandura",    name:"バンデューラ",    en:"Bandura",         year:1971, died:2021, school:"social_learning", influences:[],                    desc:"社会的学習理論（1971）・自己効力感（1977）。観察学習・モデリング・自己調整の概念を確立。クランボルツのキャリア意思決定理論、レント他のSCCTの直接的基盤。" },
