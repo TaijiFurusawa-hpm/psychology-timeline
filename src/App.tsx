@@ -93,6 +93,7 @@ const PEOPLE: Person[] = [
   // ── 社会的学習理論系（NEW） ──
   { id:"bandura",    name:"バンデューラ",    en:"Bandura",         year:1971, died:2021, school:"social_learning", influences:[],                    desc:"社会的学習理論（1971）・自己効力感（1977）。観察学習・モデリング・自己調整の概念を確立。クランボルツのキャリア意思決定理論、レント他のSCCTの直接的基盤。" },
   { id:"lent",       name:"レント他",        en:"Lent/Brown/Hackett", year:1994,         school:"social_learning", influences:["bandura"],           desc:"SCCT＝社会認知的キャリア理論（1994）。バンデューラの自己効力感理論をキャリア領域に応用。自己効力感・結果期待・個人目標の3要素でキャリア興味・選択・遂行を説明。" },
+  { id:"dweck",      name:"ドゥエック",      en:"Dweck",           year:1988,            school:"social_learning", influences:["bandura"],           desc:"マインドセット理論（1988年Dweck & Leggett論文、2006年著書『Mindset』）。Stanford大学。知能や能力に対する暗黙の信念（implicit theories）が動機づけ・行動・達成を左右する。固定マインドセット（能力は固定）vs 成長マインドセット（能力は努力で発達）。バンデューラの社会認知理論の系譜。教育・ビジネス・スポーツ領域に広く応用。" },
 
   // ── 組織キャリア系（NEW） ──
   { id:"schein",     name:"シャイン",        en:"Schein",          year:1978,            school:"org_career",      influences:[],                    desc:"キャリア・アンカー理論（1978）。組織心理学の大家。個人と組織の相互作用、3つのサイクル（生物学的・職業的・家族的）、8つのキャリア・アンカーを提唱。MITスローン経営大学院。" },
