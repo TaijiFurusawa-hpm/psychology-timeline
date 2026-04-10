@@ -71,6 +71,7 @@ const PEOPLE: Person[] = [
   { id:"maslow",     name:"マズロー",        en:"Maslow",          year:1954, died:1970, school:"humanistic",      influences:["freud"],             desc:"欲求階層説と自己実現理論（1942年発表、1954年著書『動機と人格』）。フロイト・アドラー・ユング・ホーナイ・ゴールドシュタインの部分的真実を統合。行動主義（第一の力）と精神分析（第二の力）を超える「第三の力」＝人間性心理学をロジャーズと共に確立。ローの職業心理学に直接影響。" },
   { id:"rogers",     name:"ロジャーズ",      en:"Rogers",          year:1940, died:1987, school:"humanistic",      influences:[],                    desc:"クライアント中心療法（1940年代〜）。共感・無条件の肯定的関心・一致性の3条件。1957年に人格変化の必要十分条件を記述。マズローと並ぶ人間性心理学（第三の力）の双頭。ゴードンとローゼンバーグの師。" },
   { id:"gordon",     name:"ゴードン",        en:"Gordon",          year:1962, died:2002, school:"humanistic",      influences:["rogers"],            desc:"PET親業訓練（1962年コース、著書1970）。ロジャーズの直弟子。I-messageとActive Listeningを体系化。NVCの最も近い先行モデル。" },
+  { id:"ivey",       name:"アイビィ",        en:"Ivey",            year:1968,            school:"humanistic",      influences:["rogers"],            desc:"マイクロカウンセリング（1968年論文, Journal of Counseling Psychology）。ロジャーズの共感・傾聴を「かかわり行動」「基本的傾聴技法」など観察可能・訓練可能なマイクロ技法に分解・体系化。マイクロ技法の階層モデル。後に発達的カウンセリング療法（DCT）や多文化カウンセリングを開拓。世界のカウンセラー養成に決定的影響。UMass Amherst。" },
 
   // ── NVC系 ──
   { id:"rosenberg",  name:"ローゼンバーグ",  en:"Rosenberg",       year:1963, died:2015, school:"nvc",             influences:["rogers","gordon"],  desc:"NVC＝非暴力コミュニケーション（1960年代〜、著書1999）。ロジャーズの弟子。観察・感情・ニーズ・リクエストの4段階。「感情の背後にあるニーズへ」。普遍的ニーズの前提がガーゲンから批判される。" },
