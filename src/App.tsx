@@ -72,6 +72,7 @@ const PEOPLE: Person[] = [
   { id:"rogers",     name:"ロジャーズ",      en:"Rogers",          year:1940, died:1987, school:"humanistic",      influences:[],                    desc:"クライアント中心療法（1940年代〜）。共感・無条件の肯定的関心・一致性の3条件。1957年に人格変化の必要十分条件を記述。マズローと並ぶ人間性心理学（第三の力）の双頭。ゴードンとローゼンバーグの師。" },
   { id:"gordon",     name:"ゴードン",        en:"Gordon",          year:1962, died:2002, school:"humanistic",      influences:["rogers"],            desc:"PET親業訓練（1962年コース、著書1970）。ロジャーズの直弟子。I-messageとActive Listeningを体系化。NVCの最も近い先行モデル。" },
   { id:"ivey",       name:"アイビィ",        en:"Ivey",            year:1968,            school:"humanistic",      influences:["rogers"],            desc:"マイクロカウンセリング（1968年論文, Journal of Counseling Psychology）。ロジャーズの共感・傾聴を「かかわり行動」「基本的傾聴技法」など観察可能・訓練可能なマイクロ技法に分解・体系化。マイクロ技法の階層モデル。後に発達的カウンセリング療法（DCT）や多文化カウンセリングを開拓。世界のカウンセラー養成に決定的影響。UMass Amherst。" },
+  { id:"miller",     name:"ミラー他",        en:"Miller/Rollnick", year:1983,            school:"humanistic",      influences:["rogers"],            desc:"動機づけ面接（MI, 1983年論文、1991年著書）。ロジャーズのパーソン・センタード・アプローチの基盤の上に構築。著者自身が謝辞でロジャーズへの直接の恩義を明記。指示的と追従的の間の「ガイディング・スタイル」。4プロセス＝Engaging・Focusing・Evoking・Planning。チェンジ・トーク（変化の言葉）を引き出す技法。依存症治療から教育・医療・コーチングへ広く応用。Miller: UNM / Rollnick: Cardiff大学。" },
 
   // ── NVC系 ──
   { id:"rosenberg",  name:"ローゼンバーグ",  en:"Rosenberg",       year:1963, died:2015, school:"nvc",             influences:["rogers","gordon"],  desc:"NVC＝非暴力コミュニケーション（1960年代〜、著書1999）。ロジャーズの弟子。観察・感情・ニーズ・リクエストの4段階。「感情の背後にあるニーズへ」。普遍的ニーズの前提がガーゲンから批判される。" },
