@@ -100,9 +100,12 @@ const PEOPLE: Person[] = [
   { id:"lent",       name:"レント他",        en:"Lent/Brown/Hackett", year:1994,         school:"social_learning", influences:["bandura"],           desc:"SCCT＝社会認知的キャリア理論（1994）。バンデューラの自己効力感理論をキャリア領域に応用。自己効力感・結果期待・個人目標の3要素でキャリア興味・選択・遂行を説明。" },
   { id:"dweck",      name:"ドゥエック",      en:"Dweck",           year:1988,            school:"social_learning", influences:["bandura"],           desc:"マインドセット理論（1988年Dweck & Leggett論文、2006年著書『Mindset』）。Stanford大学。知能や能力に対する暗黙の信念（implicit theories）が動機づけ・行動・達成を左右する。固定マインドセット（能力は固定）vs 成長マインドセット（能力は努力で発達）。バンデューラの社会認知理論の系譜。教育・ビジネス・スポーツ領域に広く応用。" },
 
-  // ── 組織キャリア系（NEW） ──
-  { id:"schein",     name:"シャイン",        en:"Schein",          year:1978,            school:"org_career",      influences:[],                    desc:"キャリア・アンカー理論（1978）。組織心理学の大家。個人と組織の相互作用、3つのサイクル（生物学的・職業的・家族的）、8つのキャリア・アンカーを提唱。MITスローン経営大学院。" },
-  { id:"hall",       name:"ホール",          en:"Hall",            year:1976,            school:"org_career",      influences:[],                    desc:"プロティアン・キャリア理論（1976）。ギリシャ神話の変幻自在の神プロテウスに由来。組織ではなく個人がキャリアを主導。成功基準は主観的（心理的）成功。適応力と自己認識が中核コンピテンシー。" },
+  // ── 組織キャリア系 ──
+  { id:"lewin",      name:"レヴィン",        en:"Lewin",           year:1939, died:1947, school:"org_career",      influences:[],                    desc:"グループ・ダイナミクスとアクション・リサーチの創始者。リーダーシップ3類型（専制・民主・放任, 1939）。変革の3段階モデル（解凍→変化→再凍結）。場の理論。1945年MITにグループ・ダイナミクス研究センターを設立。組織開発（OD）・社会心理学の祖。マクレガー・シャインへ続くMIT組織心理学の知的基盤を築いた。" },
+  { id:"mcgregor",   name:"マクレガー",      en:"McGregor",        year:1960, died:1964, school:"org_career",      influences:["lewin","maslow"],    desc:"Theory X / Theory Y（1960年『The Human Side of Enterprise』）。MIT Sloan経営大学院。レヴィンが築いたMITの組織研究基盤の上に、マズローの欲求階層説を経営に直接応用。X理論＝人は怠惰で管理が必要、Y理論＝人は本来自律的で成長を求める。Y理論はコーチング・サーバントリーダーシップの理論的先駆。シャインの直接の先行者。" },
+  { id:"greenleaf",  name:"グリーンリーフ",  en:"Greenleaf",       year:1970, died:1990, school:"org_career",      influences:["rogers"],            desc:"サーバント・リーダーシップ（1970年エッセイ『The Servant as Leader』）。AT&Tで38年間勤務後に提唱。「リーダーはまず奉仕者であれ」。傾聴・共感・癒し・気づき・説得・概念化・先見性・執事役・人々の成長への関与・コミュニティ構築の10特性。ロジャーズ的な傾聴・共感・人間の成長への信頼がリーダーシップ論に昇華された形。" },
+  { id:"schein",     name:"シャイン",        en:"Schein",          year:1978,            school:"org_career",      influences:["mcgregor"],          desc:"キャリア・アンカー理論（1978）・組織文化論。MIT Sloan経営大学院。マクレガーの同僚・後継者としてMITの組織心理学を発展。個人と組織の相互作用、3つのサイクル（生物学的・職業的・家族的）、8つのキャリア・アンカーを提唱。レヴィン→マクレガー→シャインのMIT系譜の集大成。" },
+  { id:"hall",       name:"ホール",          en:"Hall",            year:1976,            school:"org_career",      influences:["schein"],            desc:"プロティアン・キャリア理論（1976）。ギリシャ神話の変幻自在の神プロテウスに由来。シャインに師事。組織ではなく個人がキャリアを主導。成功基準は主観的（心理的）成功。適応力と自己認識が中核コンピテンシー。" },
   { id:"arthur",     name:"アーサー",        en:"Arthur",          year:1996,            school:"org_career",      influences:["hall"],              desc:"バウンダリーレス・キャリア（1996, Rousseauと共編）。単一組織の枠を超えた多様なキャリア形態を記述。knowing-why・knowing-how・knowing-whomの3種コンピテンシー。グローバル化・企業再編を背景に台頭。" },
 
   // ── 意思決定系（NEW） ──
