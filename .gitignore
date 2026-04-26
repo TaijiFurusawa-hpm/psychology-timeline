@@ -25,3 +25,4 @@ dist-ssr
 
 # Reference books (large binary files)
 参考書籍/
+.vercel
