@@ -10,17 +10,19 @@ const SCHOOLS: Record<string, { label: string; color: string; row: number }> = {
   mindfulness:     { label: "マインドフルネス系",    color: "#67e8f9", row: 6 },
   ta:              { label: "交流分析(TA)",          color: "#f472b6", row: 7 },
   humanistic:      { label: "人間性心理学系",        color: "#38bdf8", row: 8 },
-  nvc:             { label: "NVC系",               color: "#34d399", row: 9 },
-  constructionism: { label: "社会構成主義",          color: "#fbbf24", row: 10 },
-  narrative:       { label: "ナラティブ系",          color: "#818cf8", row: 11 },
-  vocational:      { label: "職業指導/特性因子系",   color: "#ff6b6b", row: 12 },
-  career_dev:      { label: "キャリア発達系",        color: "#ffa94d", row: 13 },
-  social_learning: { label: "社会的学習理論系",      color: "#69db7c", row: 14 },
-  org_career:      { label: "組織キャリア系",        color: "#4dabf7", row: 15 },
-  decision:        { label: "意思決定系",            color: "#da77f2", row: 16 },
-  lifespan:        { label: "発達/ライフスパン系",   color: "#facc15", row: 17 },
-  happenstance:    { label: "偶発性理論",            color: "#6ee7b7", row: 18 },
-  career:          { label: "キャリア構成系",        color: "#a5f3fc", row: 19 },
+  coaching:        { label: "コーチング系",          color: "#fdba74", row: 9 },
+  nvc:             { label: "NVC系",               color: "#34d399", row: 10 },
+  constructionism: { label: "社会構成主義",          color: "#fbbf24", row: 11 },
+  narrative:       { label: "ナラティブ系",          color: "#818cf8", row: 12 },
+  vocational:      { label: "職業指導/特性因子系",   color: "#ff6b6b", row: 13 },
+  career_dev:      { label: "キャリア発達系",        color: "#ffa94d", row: 14 },
+  social_learning: { label: "社会的学習理論系",      color: "#69db7c", row: 15 },
+  org_career:      { label: "組織キャリア系",        color: "#4dabf7", row: 16 },
+  leadership:      { label: "リーダーシップ系",      color: "#fb7185", row: 17 },
+  decision:        { label: "意思決定系",            color: "#da77f2", row: 18 },
+  lifespan:        { label: "発達/ライフスパン系",   color: "#facc15", row: 19 },
+  happenstance:    { label: "偶発性理論",            color: "#6ee7b7", row: 20 },
+  career:          { label: "キャリア構成系",        color: "#a5f3fc", row: 21 },
 };
 
 interface Person {
@@ -77,11 +79,16 @@ const PEOPLE: Person[] = [
   { id:"gallwey",    name:"ガルウェイ",      en:"Gallwey",         year:1974,            school:"humanistic",      influences:["maslow"],            desc:"インナーゲーム（1974年『The Inner Game of Tennis』、2000年『The Inner Game of Work』）。高等教育を離れテニス指導の中で学習・コーチングの根本原理を発見。「頭の中の対戦相手こそ最強の敵」——パフォーマンスを阻む内的障壁への気づきを促す。学習者自身の自然な学習能力への深い信頼が基盤。AT&T・Apple・IBM等で20年以上ビジネスに適用。命令と統制に代わる方法論。ウィットモアのGROWモデルの直接的源泉。" },
   { id:"whitmore",   name:"ウィットモア",    en:"Whitmore",        year:1992, died:2017, school:"humanistic",      influences:["gallwey","maslow"],  desc:"GROWモデルとパフォーマンス・コーチング（1992年著書『Coaching for Performance』）。ガルウェイに師事しインナーゲームを英国に導入、ビジネスコーチングに体系化。GROW＝Goal・Reality・Options・Will。マズローの欲求階層と人間性心理学を理論基盤として明示。コーチングは「命令と統制の対極にある経営行動」。12か国語に翻訳、ビジネスコーチング方法論の定番書。" },
 
+  // ── コーチング系 ──
+  { id:"coactive",   name:"キムジーハウス他",en:"Kimsey-House/Whitworth/Sandahl", year:1998, school:"coaching",        influences:["whitmore","rogers"], desc:"Co-Activeコーチング（1998年『Co-Active Coaching』、CTI＝Coaches Training Institute設立1992）。Laura Whitworth・Henry Kimsey-House・Karen Kimsey-House・Phil Sandahlによる体系。「クライアントは生まれつき創造的で・リソースに満ち・全体性を備えている」という人間観を出発点。傾聴の3レベル・直感・好奇心・行動と学習の4つの礎、自己実現/バランス/プロセスの3原則。GROWのスキルベースから「在り方（being）」中心のコーチングへ転換。世界最大級のコーチ養成機関の一つで、国際コーチング連盟（ICF）認定の中核。" },
+
   // ── NVC系 ──
   { id:"rosenberg",  name:"ローゼンバーグ",  en:"Rosenberg",       year:1963, died:2015, school:"nvc",             influences:["rogers","gordon"],  desc:"NVC＝非暴力コミュニケーション（1960年代〜、著書1999）。ロジャーズの弟子。観察・感情・ニーズ・リクエストの4段階。「感情の背後にあるニーズへ」。普遍的ニーズの前提がガーゲンから批判される。" },
 
   // ── 社会構成主義 ──
-  { id:"gergen",     name:"ガーゲン",        en:"Gergen",          year:1985,            school:"constructionism", influences:[],                    desc:"社会構成主義（American Psychologist, 1985年3月号）。Swarthmore College所属。「現実は言語と関係によって共同構成される」。Wittgenstein・Kuhn・Berger & Luckmannの影響。ニーズの普遍性を否定。ナラティブ・セラピーの理論的基盤。" },
+  { id:"berger",     name:"バーガー&ルックマン",en:"Berger/Luckmann", year:1966, died:2017, school:"constructionism", influences:[],                    desc:"『現実の社会的構成』（1966年『The Social Construction of Reality』）。知識社会学の古典。Peter L. Berger（米Boston大）とThomas Luckmann（独）の共著。シュッツの現象学的社会学を基礎に、外在化→客観化→内在化の弁証法で日常的現実の構築過程を理論化。「現実は社会的に構成される」というテーゼを定式化し、ガーゲンの社会構成主義、ウェイクのセンスメイキング、ホワイトのナラティブ・セラピーの理論的源流となった。20世紀社会学の最重要著作の一つ。" },
+  { id:"gergen",     name:"ガーゲン",        en:"Gergen",          year:1985,            school:"constructionism", influences:["berger"],            desc:"社会構成主義（American Psychologist, 1985年3月号）。Swarthmore College所属。「現実は言語と関係によって共同構成される」。Wittgenstein・Kuhn・Berger & Luckmannの影響。ニーズの普遍性を否定。ナラティブ・セラピーの理論的基盤。" },
+  { id:"weick",      name:"ウェイク",        en:"Weick",           year:1995,            school:"constructionism", influences:["berger"],            desc:"センスメイキング論（1995年『Sensemaking in Organizations』）。Michigan大学Ross経営大学院。「組織は意味づけのプロセスである」——実体としての組織（organization）から、組織化（organizing）という動的活動への視点転換。回顧的・社会的・抽出された手がかりに基づく7要素モデル（アイデンティティ・回顧性・実行的環境・社会的・進行的・抽出された手がかり・もっともらしさ）。Mann Gulch山火事の組織崩壊分析が著名。バーガー&ルックマンの知識社会学を組織研究に展開し、社会構成主義の組織論的実践を切り拓いた。" },
 
   // ── ナラティブ系 ──
   { id:"white",      name:"ホワイト他",      en:"White/Epston",    year:1990,            school:"narrative",       influences:["gergen"],            desc:"ナラティブ・セラピー（1990, Dulwich Centre）。問題の外在化「問題と人を分離する」。クライアントが自分の物語の著者になる。フーコーの権力論を中核的に援用。社会構成主義の実践的展開。" },
@@ -106,13 +113,22 @@ const PEOPLE: Person[] = [
   { id:"greenleaf",  name:"グリーンリーフ",  en:"Greenleaf",       year:1970, died:1990, school:"org_career",      influences:["rogers"],            desc:"サーバント・リーダーシップ（1970年エッセイ『The Servant as Leader』）。AT&Tで38年間勤務後に提唱。「リーダーはまず奉仕者であれ」。傾聴・共感・癒し・気づき・説得・概念化・先見性・執事役・人々の成長への関与・コミュニティ構築の10特性。ロジャーズ的な傾聴・共感・人間の成長への信頼がリーダーシップ論に昇華された形。" },
   { id:"schein",     name:"シャイン",        en:"Schein",          year:1978,            school:"org_career",      influences:["mcgregor"],          desc:"キャリア・アンカー理論（1978）・組織文化論。MIT Sloan経営大学院。マクレガーの同僚・後継者としてMITの組織心理学を発展。個人と組織の相互作用、3つのサイクル（生物学的・職業的・家族的）、8つのキャリア・アンカーを提唱。レヴィン→マクレガー→シャインのMIT系譜の集大成。" },
   { id:"hall",       name:"ホール",          en:"Hall",            year:1976,            school:"org_career",      influences:["schein"],            desc:"プロティアン・キャリア理論（1976）。ギリシャ神話の変幻自在の神プロテウスに由来。シャインに師事。組織ではなく個人がキャリアを主導。成功基準は主観的（心理的）成功。適応力と自己認識が中核コンピテンシー。" },
+  { id:"argyris",    name:"アージリス",      en:"Argyris",         year:1978, died:2013, school:"org_career",      influences:["lewin"],             desc:"組織学習論（1978年Donald Schönとの共著『Organizational Learning』）。Harvard Business School。シングルループ学習（既存ルール内の改善）vs ダブルループ学習（前提自体を問い直す変容）を提唱。「使用理論（theory-in-use）」と「信奉理論（espoused theory）」のギャップに着目。組織の防衛的ルーティンを克服するアクション・サイエンスを開発。レヴィン系のアクション・リサーチを発展させ、ピーター・センゲ『学習する組織』（1990）の直接的な理論的基盤となった。" },
   { id:"arthur",     name:"アーサー",        en:"Arthur",          year:1996,            school:"org_career",      influences:["hall"],              desc:"バウンダリーレス・キャリア（1996, Rousseauと共編）。単一組織の枠を超えた多様なキャリア形態を記述。knowing-why・knowing-how・knowing-whomの3種コンピテンシー。グローバル化・企業再編を背景に台頭。" },
+
+  // ── リーダーシップ系 ──
+  { id:"hersey",     name:"ハーシー&ブランチャード",en:"Hersey/Blanchard", year:1969, school:"leadership",      influences:["mcgregor"],          desc:"SL理論＝状況対応型リーダーシップ（1969年『Management of Organizational Behavior』）。Ohio州立大学。マクレガーY理論を発展させ、部下の成熟度（能力×意欲）に応じてリーダーシップ・スタイルを切り替えるべきとした。指示型（Telling）・コーチ型（Selling）・支援型（Participating）・委任型（Delegating）の4スタイル。実務界に最も浸透したリーダーシップ理論の一つで、Blanchardは後に『1分間マネジャー』で大衆化。" },
+  { id:"burns",      name:"バーンズ",        en:"Burns",           year:1978, died:2014, school:"leadership",      influences:[],                    desc:"変革型リーダーシップの原点（1978年『Leadership』）。Williams College政治学者。歴史的指導者の比較研究から「取引型（transactional）」と「変革型（transforming）」リーダーシップを峻別。変革型は道徳的・価値志向であり、リーダーとフォロワーが互いを高め合う相互変容関係。同書でピューリッツァー賞・全米図書賞をダブル受賞。Bass・Avolioによる組織心理学的実証化の源泉となった。" },
+  { id:"bass",       name:"バス&アヴォリオ", en:"Bass/Avolio",     year:1985, died:2007, school:"leadership",      influences:["burns"],             desc:"変革型リーダーシップの実証化（Bass 1985『Leadership and Performance Beyond Expectations』、Avolioとの共著で『Full Range Leadership』を体系化）。バーンズの政治学的概念を組織心理学に移植し、MLQ（Multifactor Leadership Questionnaire）で測定可能化。4つのI＝Idealized Influence（理想化された影響）・Inspirational Motivation（モチベーション喚起）・Intellectual Stimulation（知的刺激）・Individualized Consideration（個別配慮）。最も研究実績のあるリーダーシップ理論。" },
+  { id:"goleman",    name:"ゴールマン",      en:"Goleman",         year:1995,            school:"leadership",      influences:["maslow"],            desc:"EQ＝感情知能（1995年『Emotional Intelligence』、2002年『Primal Leadership』）。元NYTimes科学記者・心理学博士（Harvard）。Salovey & Mayerの感情知能概念を一般向けに大衆化。自己認識・自己管理・社会的認識・関係性管理の4領域。プライマル・リーダーシップでは脳の辺縁系（リミック・レゾナンス）に着目し、ビジョン型・コーチ型・関係重視型・民主型・ペースセッター型・強制型の6スタイルを提示。マズロー的な情動・自己実現の組織応用。" },
+  { id:"george",     name:"ジョージ",        en:"George",          year:2003,            school:"leadership",      influences:["greenleaf"],         desc:"オーセンティック・リーダーシップ（2003年『Authentic Leadership』、2007年『True North』）。Medtronic元CEO、Harvard Business School。エンロン事件後のリーダーシップ危機に対する応答として、「自分らしさ（authenticity）に根ざしたリーダーシップ」を提唱。自己認識・価値観・関係性・自己規律・心の指針（True North）の5要素。リーダー自身のライフストーリー（クルーシブル経験）からの学びを重視。サーバントリーダーシップの系譜を継承しつつ「リーダー自身の真正性」を強調。" },
 
   // ── 意思決定系（NEW） ──
   { id:"gelatt",     name:"ジェラット",      en:"Gelatt",          year:1962,            school:"decision",        influences:[],                    desc:"連続的意思決定モデル（1962）。予測・価値・基準の3システムによる合理的意思決定。1989年に自ら修正し「積極的不確実性（Positive Uncertainty）」を提唱。不確実性を肯定的に活用するキャリア意思決定フレームワーク。" },
 
   // ── 発達/ライフスパン系 ──
-  { id:"schlossberg",name:"シュロスバーグ",  en:"Schlossberg",     year:1981,            school:"lifespan",        influences:["erikson"],           desc:"トランジション理論（1981年論文、1989年著書『Overwhelmed』）。転機の3タイプと4S資源＝Self・Situation・Support・Strategies。発達心理学・ライフスパン系の独立した流れ。キャリア移行の資源棚卸しモデル。" },
+  { id:"levinson",   name:"レビンソン",      en:"Levinson",        year:1978, died:1994, school:"lifespan",        influences:["erikson","jung"],    desc:"成人発達理論（1978年『The Seasons of a Man's Life』、1996年『The Seasons of a Woman's Life』）。Yale大学心理学者。エリクソンの心理社会的発達論とユングの中年論を統合し、40人の男性のライフヒストリー研究から人生周期論を構築。人生を「四季」になぞらえ、約25年周期の4つの時代（児童青年期・成人前期・成人中期・成人後期）と、それぞれの境界に約5年の過渡期を設定。とりわけ「中年の過渡期（40〜45歳）」概念が広く知られる。生活構造（life structure）の安定期と過渡期の交替モデル。シュロスバーグのトランジション理論の直接的先行者。" },
+  { id:"schlossberg",name:"シュロスバーグ",  en:"Schlossberg",     year:1981,            school:"lifespan",        influences:["erikson","levinson"],desc:"トランジション理論（1981年論文、1989年著書『Overwhelmed』）。転機の3タイプと4S資源＝Self・Situation・Support・Strategies。発達心理学・ライフスパン系の独立した流れ。キャリア移行の資源棚卸しモデル。" },
   { id:"hansen",     name:"ハンセン",        en:"Hansen",          year:1997,            school:"lifespan",        influences:["super"],             desc:"統合的人生設計（Integrative Life Planning, 1997）。1980年代の「人生役割設計」を発展。仕事・学習・余暇・愛の4領域を統合する6つの重要人生課題を提示。スーパーのライフロール概念を拡張。" },
 
   // ── 偶発性理論 ──
@@ -324,9 +340,12 @@ export default function App() {
             【臨床系譜】① 行動療法：パブロフ→サルター→ウォルピ→アサーティブ
             ② 認知系：フロイト→エリス→ベック/マイケンバウム/ラザラス(第二波)→リネハン(DBT)/ヘイズ(ACT)/MBCT(第三波)
             ③ 人間性：ロジャーズ→ゴードン→ローゼンバーグ(NVC)→ガーゲン→ホワイト(ナラティブ)→サビカス
-            ＋精神分析：フロイト→エリクソン→バーン(TA)/シュロスバーグ
+            ＋精神分析：フロイト→エリクソン→バーン(TA)/レビンソン/シュロスバーグ
+            【コーチング系譜】マズロー→ガルウェイ(インナーゲーム)→ウィットモア(GROW)→キムジーハウス他(Co-Active)
+            【構成主義系譜】バーガー&ルックマン(1966)→ガーゲン(社会構成主義)/ウェイク(センスメイキング)→ホワイト(ナラティブ)
             【キャリア系譜】パーソンズ→ロー/ホランド(特性因子)→スーパー/ギンズバーグ(発達)→バンデューラ→クランボルツ(偶発性)/レント他(SCCT)
-            ＋組織系：シャイン(アンカー)/ホール(プロティアン)→アーサー(バウンダリーレス)
+            ＋組織系：レヴィン→マクレガー/アージリス(組織学習)→シャイン(アンカー)/ホール(プロティアン)→アーサー(バウンダリーレス)
+            【リーダーシップ系譜】マクレガー(Y理論)→ハーシー&ブランチャード(SL)/グリーンリーフ(サーバント)→バーンズ→バス&アヴォリオ(変革型)/ゴールマン(EQ)/ジョージ(オーセンティック)
           </p>
         </div>
       </div>
