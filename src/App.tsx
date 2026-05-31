@@ -82,16 +82,20 @@ const PEOPLE: Person[] = [
   // ── コーチング系 ──
   { id:"coactive",   name:"キムジーハウス他",en:"Kimsey-House/Whitworth/Sandahl", year:1998, school:"coaching",        influences:["whitmore","rogers"], desc:"Co-Activeコーチング（1998年『Co-Active Coaching』、CTI＝Coaches Training Institute設立1992）。Laura Whitworth・Henry Kimsey-House・Karen Kimsey-House・Phil Sandahlによる体系。「クライアントは生まれつき創造的で・リソースに満ち・全体性を備えている」という人間観を出発点。傾聴の3レベル・直感・好奇心・行動と学習の4つの礎、自己実現/バランス/プロセスの3原則。GROWのスキルベースから「在り方（being）」中心のコーチングへ転換。世界最大級のコーチ養成機関の一つで、国際コーチング連盟（ICF）認定の中核。" },
 
+  // ── コーチング学術系 ──
+  { id:"bachkirova", name:"バックキロバ",    en:"Bachkirova",      year:2010,            school:"coaching",        influences:["coactive"],          desc:"コーチングの学術的体系化／発達的コーチング（Developmental Coaching）。英Oxford Brookes大学教授。コーチングを実務家養成（Co-Activeなどのトレーニング機関）の段階から学術ディシプリンへと押し上げた中核人物。『The Complete Handbook of Coaching』などの主要編著、コーチングにおける「自己（self）」論、コーチング・スーパービジョンの理論化で知られる。コーチ自身の成人発達段階がコーチングの質を規定すると論じ、コーチング研究の方法論的基盤を整備した。" },
+
   // ── NVC系 ──
   { id:"rosenberg",  name:"ローゼンバーグ",  en:"Rosenberg",       year:1963, died:2015, school:"nvc",             influences:["rogers","gordon"],  desc:"NVC＝非暴力コミュニケーション（1960年代〜、著書1999）。ロジャーズの弟子。観察・感情・ニーズ・リクエストの4段階。「感情の背後にあるニーズへ」。普遍的ニーズの前提がガーゲンから批判される。" },
 
   // ── 社会構成主義 ──
   { id:"berger",     name:"バーガー&ルックマン",en:"Berger/Luckmann", year:1966, died:2017, school:"constructionism", influences:[],                    desc:"『現実の社会的構成』（1966年『The Social Construction of Reality』）。知識社会学の古典。Peter L. Berger（米Boston大）とThomas Luckmann（独）の共著。シュッツの現象学的社会学を基礎に、外在化→客観化→内在化の弁証法で日常的現実の構築過程を理論化。「現実は社会的に構成される」というテーゼを定式化し、ガーゲンの社会構成主義、ウェイクのセンスメイキング、ホワイトのナラティブ・セラピーの理論的源流となった。20世紀社会学の最重要著作の一つ。" },
+  { id:"foucault",   name:"フーコー",        en:"Foucault",        year:1975, died:1984, school:"constructionism", influences:[],                    desc:"『監獄の誕生』（1975年『Surveiller et punir』）ほか。フランスの哲学者・思想家。知と権力の不可分性、規律訓練（discipline）、まなざしを通じた主体化を分析し、権力を「上から抑圧するもの」ではなく社会関係に遍在し主体そのものを産出するものとして捉え直した。ホワイト＆エプストンのナラティブ・セラピーはこの権力・言説分析を中核的に援用し、「問題の外在化」「支配的な物語に抗する物語の再著述」という実践を構築した。社会構成主義・ポスト構造主義の主要な知的源流。" },
   { id:"gergen",     name:"ガーゲン",        en:"Gergen",          year:1985,            school:"constructionism", influences:["berger"],            desc:"社会構成主義（American Psychologist, 1985年3月号）。Swarthmore College所属。「現実は言語と関係によって共同構成される」。Wittgenstein・Kuhn・Berger & Luckmannの影響。ニーズの普遍性を否定。ナラティブ・セラピーの理論的基盤。" },
   { id:"weick",      name:"ウェイク",        en:"Weick",           year:1995,            school:"constructionism", influences:["berger"],            desc:"センスメイキング論（1995年『Sensemaking in Organizations』）。Michigan大学Ross経営大学院。「組織は意味づけのプロセスである」——実体としての組織（organization）から、組織化（organizing）という動的活動への視点転換。回顧的・社会的・抽出された手がかりに基づく7要素モデル（アイデンティティ・回顧性・実行的環境・社会的・進行的・抽出された手がかり・もっともらしさ）。Mann Gulch山火事の組織崩壊分析が著名。バーガー&ルックマンの知識社会学を組織研究に展開し、社会構成主義の組織論的実践を切り拓いた。" },
 
   // ── ナラティブ系 ──
-  { id:"white",      name:"ホワイト他",      en:"White/Epston",    year:1990,            school:"narrative",       influences:["gergen"],            desc:"ナラティブ・セラピー（1990, Dulwich Centre）。問題の外在化「問題と人を分離する」。クライアントが自分の物語の著者になる。フーコーの権力論を中核的に援用。社会構成主義の実践的展開。" },
+  { id:"white",      name:"ホワイト他",      en:"White/Epston",    year:1990,            school:"narrative",       influences:["gergen","foucault"],  desc:"ナラティブ・セラピー（1990, Dulwich Centre）。問題の外在化「問題と人を分離する」。クライアントが自分の物語の著者になる。フーコーの権力論を中核的に援用。社会構成主義の実践的展開。" },
 
   // ── 職業指導/特性因子系（NEW） ──
   { id:"parsons",    name:"パーソンズ",      en:"Parsons",         year:1908, died:1908, school:"vocational",      influences:[],                    desc:"職業指導の創始者。1908年ボストンに職業局を設立、翌1909年に死後出版『Choosing a Vocation』。自己分析・職業理解・合理的推論の3ステップ。特性因子論の源流。" },
@@ -103,9 +107,10 @@ const PEOPLE: Person[] = [
   { id:"super",      name:"スーパー",        en:"Super",           year:1957, died:1994, school:"career_dev",      influences:["parsons","ginzberg","jung"],desc:"キャリア発達理論（1957）。Columbia大学。キャリアを自己概念の実現過程として定義。ユングの人生段階論を踏まえ、成長・探索・確立・維持・解放の5段階を提唱。1984年ライフ・キャリア・レインボー（ライフスパン＋ライフスペース）。サビカスの直接の先駆者。" },
 
   // ── 社会的学習理論系（NEW） ──
+  { id:"vygotsky",   name:"ヴィゴツキー",    en:"Vygotsky",        year:1934, died:1934, school:"social_learning", influences:[],                    desc:"文化-歴史的発達理論／『思考と言語』（1934）。旧ソ連の心理学者。発達の最近接領域（ZPD）——子どもが独力で到達できる水準と、他者の援助があれば到達できる水準との差——を提唱し、「学習が発達を牽引する」とした。能力を固定的な所与ではなく社会的相互作用の中で形成されるものと捉える視点は、ブルーナーらの「足場かけ（scaffolding）」概念の源泉となり、能力の可変性を説くドゥエックの成長マインドセット理論の上流に位置づけられる。援助を通じた発達という発想はコーチング・教育実践の理論的源流の一つ。英語圏には1962年・1978年の翻訳を経て本格的に受容された。" },
   { id:"bandura",    name:"バンデューラ",    en:"Bandura",         year:1971, died:2021, school:"social_learning", influences:[],                    desc:"社会的学習理論（1971）・自己効力感（1977）。観察学習・モデリング・自己調整の概念を確立。クランボルツのキャリア意思決定理論、レント他のSCCTの直接的基盤。" },
   { id:"lent",       name:"レント他",        en:"Lent/Brown/Hackett", year:1994,         school:"social_learning", influences:["bandura"],           desc:"SCCT＝社会認知的キャリア理論（1994）。バンデューラの自己効力感理論をキャリア領域に応用。自己効力感・結果期待・個人目標の3要素でキャリア興味・選択・遂行を説明。" },
-  { id:"dweck",      name:"ドゥエック",      en:"Dweck",           year:1988,            school:"social_learning", influences:["bandura"],           desc:"マインドセット理論（1988年Dweck & Leggett論文、2006年著書『Mindset』）。Stanford大学。知能や能力に対する暗黙の信念（implicit theories）が動機づけ・行動・達成を左右する。固定マインドセット（能力は固定）vs 成長マインドセット（能力は努力で発達）。バンデューラの社会認知理論の系譜。教育・ビジネス・スポーツ領域に広く応用。" },
+  { id:"dweck",      name:"ドゥエック",      en:"Dweck",           year:1988,            school:"social_learning", influences:["bandura","vygotsky"], desc:"マインドセット理論（1988年Dweck & Leggett論文、2006年著書『Mindset』）。Stanford大学。知能や能力に対する暗黙の信念（implicit theories）が動機づけ・行動・達成を左右する。固定マインドセット（能力は固定）vs 成長マインドセット（能力は努力で発達）。バンデューラの社会認知理論の系譜であり、能力は努力で可変だとする発想はヴィゴツキーの発達観にも遡る。教育・ビジネス・スポーツ領域に広く応用。" },
 
   // ── 組織キャリア系 ──
   { id:"lewin",      name:"レヴィン",        en:"Lewin",           year:1939, died:1947, school:"org_career",      influences:[],                    desc:"グループ・ダイナミクスとアクション・リサーチの創始者。リーダーシップ3類型（専制・民主・放任, 1939）。変革の3段階モデル（解凍→変化→再凍結）。場の理論。1945年MITにグループ・ダイナミクス研究センターを設立。組織開発（OD）・社会心理学の祖。マクレガー・シャインへ続くMIT組織心理学の知的基盤を築いた。" },
@@ -113,13 +118,15 @@ const PEOPLE: Person[] = [
   { id:"greenleaf",  name:"グリーンリーフ",  en:"Greenleaf",       year:1970, died:1990, school:"org_career",      influences:["rogers"],            desc:"サーバント・リーダーシップ（1970年エッセイ『The Servant as Leader』）。AT&Tで38年間勤務後に提唱。「リーダーはまず奉仕者であれ」。傾聴・共感・癒し・気づき・説得・概念化・先見性・執事役・人々の成長への関与・コミュニティ構築の10特性。ロジャーズ的な傾聴・共感・人間の成長への信頼がリーダーシップ論に昇華された形。" },
   { id:"schein",     name:"シャイン",        en:"Schein",          year:1978,            school:"org_career",      influences:["mcgregor"],          desc:"キャリア・アンカー理論（1978）・組織文化論。MIT Sloan経営大学院。マクレガーの同僚・後継者としてMITの組織心理学を発展。個人と組織の相互作用、3つのサイクル（生物学的・職業的・家族的）、8つのキャリア・アンカーを提唱。レヴィン→マクレガー→シャインのMIT系譜の集大成。" },
   { id:"hall",       name:"ホール",          en:"Hall",            year:1976,            school:"org_career",      influences:["schein"],            desc:"プロティアン・キャリア理論（1976）。ギリシャ神話の変幻自在の神プロテウスに由来。シャインに師事。組織ではなく個人がキャリアを主導。成功基準は主観的（心理的）成功。適応力と自己認識が中核コンピテンシー。" },
-  { id:"argyris",    name:"アージリス",      en:"Argyris",         year:1978, died:2013, school:"org_career",      influences:["lewin"],             desc:"組織学習論（1978年Donald Schönとの共著『Organizational Learning』）。Harvard Business School。シングルループ学習（既存ルール内の改善）vs ダブルループ学習（前提自体を問い直す変容）を提唱。「使用理論（theory-in-use）」と「信奉理論（espoused theory）」のギャップに着目。組織の防衛的ルーティンを克服するアクション・サイエンスを開発。レヴィン系のアクション・リサーチを発展させ、ピーター・センゲ『学習する組織』（1990）の直接的な理論的基盤となった。" },
+  { id:"argyris",    name:"アージリス",      en:"Argyris",         year:1978, died:2013, school:"org_career",      influences:["lewin","schon"],     desc:"組織学習論（1978年Donald Schönとの共著『Organizational Learning』）。Harvard Business School。シングルループ学習（既存ルール内の改善）vs ダブルループ学習（前提自体を問い直す変容）を提唱。「使用理論（theory-in-use）」と「信奉理論（espoused theory）」のギャップに着目。組織の防衛的ルーティンを克服するアクション・サイエンスを開発。レヴィン系のアクション・リサーチを発展させ、ピーター・センゲ『学習する組織』（1990）の直接的な理論的基盤となった。" },
+  { id:"schon",      name:"ショーン",        en:"Schön",           year:1971, died:1997, school:"org_career",      influences:[],                    desc:"省察的実践論。MIT教授。哲学（『Displacement of Concepts』1963）から出発し、『Beyond the Stable State』（1971）で絶え間ない変化に適応し続ける学習システムを論じた。アージリスとの共著『Theory in Practice』（1974）・『Organizational Learning』（1978）で、シングルループ／ダブルループ学習や「使用理論・信奉理論」のギャップを共同で定式化。単著『The Reflective Practitioner（省察的実践とは何か）』（1983）で「行為の中の省察（reflection-in-action）」を提唱し、専門家の知を暗黙の実践知として捉え直した。専門職教育・コーチングの実践理論に決定的な影響を与えた。" },
   { id:"arthur",     name:"アーサー",        en:"Arthur",          year:1996,            school:"org_career",      influences:["hall"],              desc:"バウンダリーレス・キャリア（1996, Rousseauと共編）。単一組織の枠を超えた多様なキャリア形態を記述。knowing-why・knowing-how・knowing-whomの3種コンピテンシー。グローバル化・企業再編を背景に台頭。" },
 
   // ── リーダーシップ系 ──
   { id:"hersey",     name:"ハーシー&ブランチャード",en:"Hersey/Blanchard", year:1969, school:"leadership",      influences:["mcgregor"],          desc:"SL理論＝状況対応型リーダーシップ（1969年『Management of Organizational Behavior』）。Ohio州立大学。マクレガーY理論を発展させ、部下の成熟度（能力×意欲）に応じてリーダーシップ・スタイルを切り替えるべきとした。指示型（Telling）・コーチ型（Selling）・支援型（Participating）・委任型（Delegating）の4スタイル。実務界に最も浸透したリーダーシップ理論の一つで、Blanchardは後に『1分間マネジャー』で大衆化。" },
   { id:"burns",      name:"バーンズ",        en:"Burns",           year:1978, died:2014, school:"leadership",      influences:[],                    desc:"変革型リーダーシップの原点（1978年『Leadership』）。Williams College政治学者。歴史的指導者の比較研究から「取引型（transactional）」と「変革型（transforming）」リーダーシップを峻別。変革型は道徳的・価値志向であり、リーダーとフォロワーが互いを高め合う相互変容関係。同書でピューリッツァー賞・全米図書賞をダブル受賞。Bass・Avolioによる組織心理学的実証化の源泉となった。" },
   { id:"bass",       name:"バス&アヴォリオ", en:"Bass/Avolio",     year:1985, died:2007, school:"leadership",      influences:["burns"],             desc:"変革型リーダーシップの実証化（Bass 1985『Leadership and Performance Beyond Expectations』、Avolioとの共著で『Full Range Leadership』を体系化）。バーンズの政治学的概念を組織心理学に移植し、MLQ（Multifactor Leadership Questionnaire）で測定可能化。4つのI＝Idealized Influence（理想化された影響）・Inspirational Motivation（モチベーション喚起）・Intellectual Stimulation（知的刺激）・Individualized Consideration（個別配慮）。最も研究実績のあるリーダーシップ理論。" },
+  { id:"heifetz",    name:"ハイフェッツ",    en:"Heifetz",         year:1994,            school:"leadership",      influences:["bass"],              desc:"適応型リーダーシップ（Adaptive Leadership）／『Leadership Without Easy Answers』（1994）。Harvard Kennedy School、精神科医出身。既存の知識・手順で解決できる「技術的問題（technical problem）」と、人々の価値観・信念・行動の変容そのものを要する「適応課題（adaptive challenge）」を峻別。リーダーの役割を「答えを与えること」ではなく「人々に課題を引き受けさせ、適応の作業（adaptive work）を促すこと」と再定義した。権限ある／なきリーダーシップ、「バルコニーに上がる」視点転換などの実践概念を提示。バーンズ→バスの変革型リーダーシップ論を、VUCA時代の課題解決論へと展開した現代リーダーシップ論の中核。" },
   { id:"goleman",    name:"ゴールマン",      en:"Goleman",         year:1995,            school:"leadership",      influences:["maslow"],            desc:"EQ＝感情知能（1995年『Emotional Intelligence』、2002年『Primal Leadership』）。元NYTimes科学記者・心理学博士（Harvard）。Salovey & Mayerの感情知能概念を一般向けに大衆化。自己認識・自己管理・社会的認識・関係性管理の4領域。プライマル・リーダーシップでは脳の辺縁系（リミック・レゾナンス）に着目し、ビジョン型・コーチ型・関係重視型・民主型・ペースセッター型・強制型の6スタイルを提示。マズロー的な情動・自己実現の組織応用。" },
   { id:"george",     name:"ジョージ",        en:"George",          year:2003,            school:"leadership",      influences:["greenleaf"],         desc:"オーセンティック・リーダーシップ（2003年『Authentic Leadership』、2007年『True North』）。Medtronic元CEO、Harvard Business School。エンロン事件後のリーダーシップ危機に対する応答として、「自分らしさ（authenticity）に根ざしたリーダーシップ」を提唱。自己認識・価値観・関係性・自己規律・心の指針（True North）の5要素。リーダー自身のライフストーリー（クルーシブル経験）からの学びを重視。サーバントリーダーシップの系譜を継承しつつ「リーダー自身の真正性」を強調。" },
 
@@ -341,11 +348,11 @@ export default function App() {
             ② 認知系：フロイト→エリス→ベック/マイケンバウム/ラザラス(第二波)→リネハン(DBT)/ヘイズ(ACT)/MBCT(第三波)
             ③ 人間性：ロジャーズ→ゴードン→ローゼンバーグ(NVC)→ガーゲン→ホワイト(ナラティブ)→サビカス
             ＋精神分析：フロイト→エリクソン→バーン(TA)/レビンソン/シュロスバーグ
-            【コーチング系譜】マズロー→ガルウェイ(インナーゲーム)→ウィットモア(GROW)→キムジーハウス他(Co-Active)
-            【構成主義系譜】バーガー&ルックマン(1966)→ガーゲン(社会構成主義)/ウェイク(センスメイキング)→ホワイト(ナラティブ)
+            【コーチング系譜】マズロー→ガルウェイ(インナーゲーム)→ウィットモア(GROW)→キムジーハウス他(Co-Active)→バックキロバ(学術体系化)
+            【構成主義系譜】バーガー&ルックマン(1966)→ガーゲン(社会構成主義)/ウェイク(センスメイキング)、フーコー(権力論)→ホワイト(ナラティブ)
             【キャリア系譜】パーソンズ→ロー/ホランド(特性因子)→スーパー/ギンズバーグ(発達)→バンデューラ→クランボルツ(偶発性)/レント他(SCCT)
-            ＋組織系：レヴィン→マクレガー/アージリス(組織学習)→シャイン(アンカー)/ホール(プロティアン)→アーサー(バウンダリーレス)
-            【リーダーシップ系譜】マクレガー(Y理論)→ハーシー&ブランチャード(SL)/グリーンリーフ(サーバント)→バーンズ→バス&アヴォリオ(変革型)/ゴールマン(EQ)/ジョージ(オーセンティック)
+            ＋組織系：レヴィン→マクレガー/アージリス&ショーン(組織学習)→シャイン(アンカー)/ホール(プロティアン)→アーサー(バウンダリーレス)
+            【リーダーシップ系譜】マクレガー(Y理論)→ハーシー&ブランチャード(SL)/グリーンリーフ(サーバント)→バーンズ→バス&アヴォリオ(変革型)→ハイフェッツ(適応型)/ゴールマン(EQ)/ジョージ(オーセンティック)
           </p>
         </div>
       </div>
