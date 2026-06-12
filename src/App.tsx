@@ -23,6 +23,7 @@ const SCHOOLS: Record<string, { label: string; color: string; row: number }> = {
   lifespan:        { label: "発達/ライフスパン系",   color: "#facc15", row: 19 },
   happenstance:    { label: "偶発性理論",            color: "#6ee7b7", row: 20 },
   career:          { label: "キャリア構成系",        color: "#a5f3fc", row: 21 },
+  social_network:  { label: "社会ネットワーク論",    color: "#86efac", row: 22 },
 };
 
 interface Person {
@@ -139,7 +140,10 @@ const PEOPLE: Person[] = [
   { id:"hansen",     name:"ハンセン",        en:"Hansen",          year:1997,            school:"lifespan",        influences:["super"],             desc:"統合的人生設計（Integrative Life Planning, 1997）。1980年代の「人生役割設計」を発展。仕事・学習・余暇・愛の4領域を統合する6つの重要人生課題を提示。スーパーのライフロール概念を拡張。" },
 
   // ── 偶発性理論 ──
-  { id:"krumboltz",  name:"クランボルツ",    en:"Krumboltz",       year:1996, died:2019, school:"happenstance",    influences:["bandura"],           desc:"社会的学習理論に基づくキャリア意思決定理論（SLTCDM, 1979）→学習理論（LTCC, 1996）→偶発性学習理論（HLT, 2009）。バンデューラの社会的学習理論を礎に「偶然への開かれ」を説く。用語「Planned Happenstance」はMitchellが命名。" },
+  { id:"krumboltz",  name:"クランボルツ",    en:"Krumboltz",       year:1996, died:2019, school:"happenstance",    influences:["bandura"],           desc:"社会的学習理論に基づくキャリア意思決定理論（SLTCDM, 1979）→学習理論（LTCC, 1996）→偶発性学習理論（HLT, 2009）。バンデューラの社会的学習理論を礎に「偶然への開かれ」を説く。用語「Planned Happenstance」はMitchellが命名。グラノヴェッターの弱い紐帯論と実践上の強い補完関係あり。" },
+
+  // ── 社会的ネットワーク論 ──
+  { id:"granovetter", name:"グラノヴェッター", en:"Granovetter",     year:1973,            school:"social_network",  influences:[],                    desc:"弱い紐帯の強さ（1973, American Journal of Sociology Vol.78）。Johns Hopkins大学（後にStanford）の社会学者。「強い紐帯（親密な関係）より弱い紐帯（知人・周縁的関係）の方が、自分の属するクラスター外の新情報・就職機会を運ぶ」という反直観的命題を実証。ミクロの二者関係がマクロの社会構造に連結する仕組みを社会ネットワーク分析で解明。理論的系譜はクランボルツとは独立（クランボルツの源流はバンデューラの社会的学習理論）だが、実践上は強力な補完関係を持つ：多様な弱い紐帯の維持こそが偶発的機会（Planned Happenstance）の到来を構造的に促す。キャリアコーチングにおける「深く少なくではなく広く薄くつながる」という助言の理論的根拠。" },
 
   // ── キャリア構成系 ──
   { id:"savickas",   name:"サビカス",        en:"Savickas",        year:2002,            school:"career",          influences:["super","gergen","white"], desc:"キャリア構成理論（CCT, 2002年初出・2013年改訂）。スーパーの理論を発展させ、社会構成主義・ナラティブ心理学と統合。「客観的キャリアは存在せず、語ることで構成される」。ライフテーマ・キャリアストーリー・インタビュー。" },
